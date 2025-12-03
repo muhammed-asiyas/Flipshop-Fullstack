@@ -14,7 +14,7 @@
   align-items: center;
   padding: 40px 20px;
 
-  background: linear-gradient(135deg, #b734de, #287676, #1fcd08);
+  background: linear-gradient(135deg, #ffffff, #2d2d2d, #030303);
   background-size: 300% 300%;
   animation: gradientMove 15s ease-in-out infinite, fadeIn 1s ease-in-out;
 }

@@ -27,7 +27,8 @@ export const getCart = () => apiFetch('/', { method: 'GET' });
 export const addToCart = (productId, qty = 1, size) =>
   apiFetch('/add', {
     method: 'POST',
-    body: JSON.stringify({ productId, qty, size })
+    body: JSON.stringify({ productId, quantity: qty, size })
+
   });
 
 export const updateQty = (itemId, qty) =>

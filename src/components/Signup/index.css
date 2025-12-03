@@ -13,7 +13,7 @@
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #b734de, #287676, #1fcd08);
+  background: linear-gradient(135deg, #ffffff, #2d2d2d, #030303);
   background-size: 300% 300%;
   padding-top: 40px;
 
@@ -112,7 +112,7 @@
   padding: 10px;
   border-radius: 10px;
   border: none;
-  background: linear-gradient(135deg, #025454, #077d7d);
+  background: linear-gradient(135deg, #303232, #0f1212);
   color: white;
   font-size: 17px;
   font-family: "Poppins", sans-serif;
@@ -124,9 +124,9 @@
 }
 
 .login-button:hover {
-  background: linear-gradient(135deg, #007f7f, #00a2a2);
+  background: linear-gradient(135deg, #343636, #252e2e);
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 150, 150, 0.4);
+  box-shadow: 0 10px 20px rgba(29, 37, 37, 0.874);
 }
 
 .login-button:active {
@@ -139,7 +139,7 @@
    ============================================================ */
 
 .change-user-text {
-  color: #007878;
+  color: #030404;
   font-size: 17px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
@@ -149,12 +149,16 @@
 }
 
 .change-user-text:hover {
-  color: #005b5b;
+  color: #ffffff;
   transform: scale(1.05);
 }
 
 .link-item {
   text-decoration: none;
+  color: azure;
+}
+.link-item:hover {
+  color: black;
 }
 
 
