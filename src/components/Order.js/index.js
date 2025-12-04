@@ -35,7 +35,7 @@ export default function Order() {
         <div className="order-info-card">
           <h2>Order Details</h2>
           <p><strong>Order ID:</strong> {order._id}</p>
-          <p><strong>Email:</strong> {order.email || "No email provided"}</p>
+          <p><strong>Email:</strong> {order.shippingAddress?.email || "No email provided"}</p>
           <p><strong>Payment Method:</strong> {order.paymentMethod}</p>
 
           <p>
