@@ -66,31 +66,39 @@ export default function Cart() {
   };
 
   // ➤ Step 2: Confirm order from popup
-  const confirmOrder = async () => {
+  // In Cart.jsx confirmOrder
+
+const confirmOrder = async () => {
   try {
     const orderData = {
       items: cart.items.map(i => ({
         product: i.product._id,
-        qty: i.qty || i.quantity,
+        qty: i.qty,
       })),
+
       shippingAddress: {
-        ...shipping,
-        email: shipping.email,   // FIX 1
+        fullName: shipping.fullName,
+        address: shipping.address,
+        email: shipping.email,  // Important
+        city: shipping.city,
+        postalCode: shipping.postalCode,
+        country: shipping.country,
+        phone: shipping.phone
       },
-      email: shipping.email,      // FIX 2
-      paymentMethod: "mock"
+
+      paymentMethod: "mock",
     };
 
-      const order = await createOrder(orderData);
+    const order = await createOrder(orderData);
 
-      setShowModal(false);
-      navigate(`/order/${order._id}`);
-      handleClearCart()
-    } catch (err) {
-      console.error(err);
-      alert("Order failed. Try again.");
-    }
-  };
+    setShowModal(false);
+    navigate(`/order/${order._id}`);
+    handleClearCart();
+  } catch (err) {
+    alert("Order failed: " + err.message);
+  }
+};
+
 
   if (loading) return <div className="loading-text">Loading...</div>;
 

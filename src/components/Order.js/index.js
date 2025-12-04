@@ -51,6 +51,7 @@ export default function Order() {
           <h2>Shipping Address</h2>
           <p>{order.shippingAddress?.fullName}</p>
           <p>{order.shippingAddress?.address}</p>
+          <p>{order.shippingAddress?.phone}</p>
           <p>{order.shippingAddress?.city}</p>
           <p>{order.shippingAddress?.postalCode}</p>
           <p>{order.shippingAddress?.country}</p>
