@@ -73,7 +73,8 @@ const confirmOrder = async () => {
     const orderData = {
       items: cart.items.map(i => ({
         product: i.product._id,
-        qty: i.qty,
+        qty: i.quantity,
+        size: i.size,
       })),
 
       shippingAddress: {
