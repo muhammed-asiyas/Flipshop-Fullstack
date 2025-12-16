@@ -1,0 +1,366 @@
+/* ===== Premium Fonts ===== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+/* GLOBAL FONT OVERRIDE */
+* {
+  font-family: "Plus Jakarta Sans", "Poppins", "Inter", sans-serif;
+}
+
+/* ============================================================
+   CART PAGE BACKGROUND
+   ============================================================ */
+.cart-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff, #2d2d2d, #030303);
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite, fadeIn 1.2s ease-in-out;
+}
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+.cart-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #3d3737;
+  margin-bottom: 25px;
+  letter-spacing: -1px;
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+  animation: textFade 1s ease-in-out;
+}
+
+/* ============================================================
+   MAIN CONTAINER
+   ============================================================ */
+.cart-wrapper {
+  width: 95%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.7s ease-out;
+}
+
+/* ============================================================
+   REMOVE ALL ITEMS BUTTON
+   ============================================================ */
+.cart-clear-btn {
+  background: #311c1b;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.cart-clear-btn:hover {
+  background: #ff4b57;
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(255, 90, 90, 0.6);
+}
+
+/* ============================================================
+   CART ITEMS LIST
+   ============================================================ */
+.cart-items-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ============================================================
+   PRICE SUMMARY AREA
+   ============================================================ */
+.cart-summary {
+  margin-top: 28px;
+  padding: 22px;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.summary-label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.summary-value {
+  font-weight: 700;
+  color: #000000;
+}
+
+.summary-value.discount {
+  color: #453b3b;
+}
+
+.summary-total {
+  font-size: 26px;
+  font-weight: 800;
+  margin-top: 18px;
+  color: #000000;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-total span {
+  color: #000000;
+  font-weight: 900;
+}
+
+.order-now-btn {
+  width: 100%;
+  background: #2fa3a3;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.order-now-btn:hover {
+  background: #248888;
+}
+
+
+/* Empty Cart Text */
+.empty-cart-text {
+  margin-top: 50px;
+  font-size: 24px;
+  color: #000000;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  animation: textFade 1s ease-out;
+}
+
+/* Loading Text */
+.loading-text {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+@media (max-width: 768px) {
+  .cart-wrapper {
+    padding: 20px;
+  }
+
+  .cart-title {
+    font-size: 36px;
+  }
+
+  .summary-total {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-title {
+    font-size: 28px;
+  }
+
+  .cart-summary h3 {
+    font-size: 18px;
+  }
+
+  .summary-total {
+    font-size: 20px;
+  }
+}
+
+
+/* ===== Modal Popup (Responsive) ===== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+  padding: 10px;
+}
+
+.modal-box {
+  width: 380px;
+  max-width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  animation: popup 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+@keyframes popup {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Input fields */
+.modal-box input {
+  padding: 12px;
+  border: 1px solid #c8c8c8;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color .2s;
+}
+
+.modal-box input:focus {
+  border-color: #1c7ed6;
+  outline: none;
+}
+
+/* Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  gap: 12px;
+}
+
+.cancel-btn,
+.confirm-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.cancel-btn {
+  background: #e5e5e5;
+}
+
+.confirm-btn {
+  background: #1c7ed6;
+  color: white;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* 📱 Small Phones */
+@media (max-width: 480px) {
+  .modal-box {
+    width: 95%;
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .modal-box input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .cancel-btn, .confirm-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* 📱 Medium Phones / Small Tablets */
+@media (max-width: 768px) {
+  .modal-box {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+/* 💻 Smaller laptops (1024px) */
+@media (max-width: 1024px) {
+  .modal-box {
+    width: 420px;
+  }
+}
+
+/* 🖥 Large screens */
+@media (min-width: 1400px) {
+  .modal-box {
+    width: 420px;
+    padding: 30px;
+  }
+}
